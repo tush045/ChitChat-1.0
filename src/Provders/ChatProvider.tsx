@@ -4,7 +4,7 @@ import { StreamChat } from "stream-chat";
 import { Chat, OverlayProvider } from "stream-chat-expo";
 
 
-const client = StreamChat.getInstance(process.env.EXPO_PUBLIC_STREAM_PUBLIC_KEY);
+const client = StreamChat.getInstance(process.env.EXPO_PUBLIC_STREAM_PUBLIC_KEY as string)
 export default function ChatProvider({ children }: PropsWithChildren) {
     const [isReady,setIsReady] = useState(false);
     useEffect(() => {
