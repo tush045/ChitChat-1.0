@@ -5,8 +5,8 @@ import { useAuth } from '@/src/Provders/AuthProvider';
 import UserListItem from '@/src/Components/UserListItem';
 
 const usersList = () => {
-    const [users, setUsers] = useState(null);
-    const {user,profile} = useAuth();
+    const [users, setUsers] = useState();
+    const {user} = useAuth();
     useEffect(() => {
         const fetchUsers = async () => {
           let { data :profiles , error } = await supabase
