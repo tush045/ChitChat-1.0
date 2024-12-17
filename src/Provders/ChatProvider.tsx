@@ -21,7 +21,7 @@ export default function ChatProvider({ children }: PropsWithChildren) {
                 {
                     id: profile?.id,
                     name: profile?.full_name,
-                    image: supabase.storage.from('avatars').getPublicUrl(profile.avatar_url).data.publicUrl,
+                    image: supabase.storage.from('avatars').getPublicUrl(profile?.avatar_url).data.publicUrl,
                 },
                 client.devToken(profile?.id)
             );

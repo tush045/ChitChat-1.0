@@ -10,7 +10,8 @@ export default function TabsLayout() {
             <Tabs.Screen name='profile' options={{
                 title: "Profile", tabBarIcon: ({color,size}) => (
                     <FontAwesome5 name="user-alt" size={size} color={color} />
-                )
+                ),
+                headerTitleAlign:'center'
             }} />
         </Tabs>
     );

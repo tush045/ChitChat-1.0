@@ -5,13 +5,13 @@ import { Redirect, Slot, Stack } from "expo-router";
 
 
 export default function HomeLayout() {
-    const {user} = useAuth();
+    const { user } = useAuth();
     if (!user) {
-        return <Redirect href={'/(auth)/login'}/>
+        return <Redirect href={'/(auth)/login'} />
     }
     return (
         <ChatProvider>
-            <Stack screenOptions={{ headerShown: false }} />
+            <Stack screenOptions={{headerShown:false}}/>
         </ChatProvider>
     );
 }

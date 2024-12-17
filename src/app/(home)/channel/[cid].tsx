@@ -1,7 +1,6 @@
 import { useLocalSearchParams } from "expo-router";
 import { useEffect, useState } from "react";
 import { ActivityIndicator, Text } from "react-native";
-// import { Channel as ChannelType } from 'stream-chat';
 import { Channel as ChannelType } from 'stream-chat';
 import { Channel, MessageInput, MessageList, useChatContext } from "stream-chat-expo";
 
@@ -14,6 +13,8 @@ export default function channelScreen() {
       const fetchChannel = async () => {
         const channels = await client.queryChannels({ cid });
         setChannel(channels[0])
+        console.log(channels[0]);
+        
         
       }
       fetchChannel();
@@ -27,7 +28,7 @@ export default function channelScreen() {
     }
 
     return (
-        <Channel channel={channel}>
+        <Channel  channel={channel} >
             <MessageList />
             <MessageInput />
         </Channel>
