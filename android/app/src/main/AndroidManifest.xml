@@ -28,6 +28,7 @@
         <category android:name="android.intent.category.BROWSABLE"/>
         <data android:scheme="myChitChat"/>
         <data android:scheme="com.tusharchopra275.ChitChat"/>
+        <data android:scheme="exp+chitchat"/>
       </intent-filter>
     </activity>
   </application>
