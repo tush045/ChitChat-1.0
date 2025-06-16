@@ -8,7 +8,8 @@ import { ChannelList } from 'stream-chat-expo'
 export default function MainTabScreen() {
     const { user } = useAuth();
     // const [chattedUser,setChattedUser] = useState('');
-
+    
+    
 
     return (
         <>
